@@ -1,5 +1,5 @@
 # 🧹 Smart Data Cleaner
-### ✨ Clean • Analyze • Transform • Download (No-Code Data Cleaning Tool)
+### ✨ Clean • Analyze • Transform • Download
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10+-blue.svg"/>
@@ -91,6 +91,7 @@ This project simulates a **real Data Analyst workflow** inside a modern UI.
 ---
 
 ## 🏗️ Project Architecture
+
 
 
 
