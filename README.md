@@ -19,6 +19,15 @@
 
 -----
 
+<img width="1920" height="1080" alt="Screenshot 2026-02-18 232431" src="https://github.com/user-attachments/assets/86d91aa8-028d-41c9-b9ae-5bea186c3d42" />
+
+----
+
+<img width="1920" height="1080" alt="Screenshot 2026-02-18 232505" src="https://github.com/user-attachments/assets/bf8ffd19-98c4-4b43-b8cb-414fa1b0aedd" />
+
+-----
+
+
 
 ## 🎯 Project Overview
 
@@ -82,5 +91,6 @@ This project simulates a **real Data Analyst workflow** inside a modern UI.
 ---
 
 ## 🏗️ Project Architecture
+
 
 
