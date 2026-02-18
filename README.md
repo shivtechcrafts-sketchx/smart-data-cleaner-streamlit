@@ -10,15 +10,15 @@
 
 ---
 
-## 🚀 Project Demo (Animation Preview)
-
-<p align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzQ2NmY3b2x1YXl2Z2l4NnZrMHV2N2ZndTRhM2R4M2EwZTd5bWh0ZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/coxQHKASG60HrHtvkt/giphy.gif" width="750"/>
-</p>
-
-> 💡 Replace this GIF later with your own screen recording for best impact.
+## 🚀 Project Demo :
+<img width="1920" height="1080" alt="Screenshot 2026-02-18 232351" src="https://github.com/user-attachments/assets/8bfd4de6-5cfa-430b-ba10-79ba779d99d2" />
 
 ---
+
+<img width="1920" height="1080" alt="Screenshot 2026-02-18 232410" src="https://github.com/user-attachments/assets/580a8eeb-b4d9-4be0-91a0-bc8ff133ef0b" />
+
+-----
+
 
 ## 🎯 Project Overview
 
@@ -82,4 +82,5 @@ This project simulates a **real Data Analyst workflow** inside a modern UI.
 ---
 
 ## 🏗️ Project Architecture
+
 
