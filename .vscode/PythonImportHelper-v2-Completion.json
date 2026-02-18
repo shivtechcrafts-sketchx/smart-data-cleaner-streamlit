@@ -1,0 +1,328 @@
+[
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "seaborn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "seaborn",
+        "description": "seaborn",
+        "detail": "seaborn",
+        "documentation": {}
+    },
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "load_data",
+        "importPath": "modules.loader",
+        "description": "modules.loader",
+        "isExtraImport": true,
+        "detail": "modules.loader",
+        "documentation": {}
+    },
+    {
+        "label": "fill_null_values",
+        "importPath": "modules.cleaner",
+        "description": "modules.cleaner",
+        "isExtraImport": true,
+        "detail": "modules.cleaner",
+        "documentation": {}
+    },
+    {
+        "label": "drop_null_rows",
+        "importPath": "modules.cleaner",
+        "description": "modules.cleaner",
+        "isExtraImport": true,
+        "detail": "modules.cleaner",
+        "documentation": {}
+    },
+    {
+        "label": "drop_null_columns",
+        "importPath": "modules.cleaner",
+        "description": "modules.cleaner",
+        "isExtraImport": true,
+        "detail": "modules.cleaner",
+        "documentation": {}
+    },
+    {
+        "label": "apply_numeric_filter",
+        "importPath": "modules.filters",
+        "description": "modules.filters",
+        "isExtraImport": true,
+        "detail": "modules.filters",
+        "documentation": {}
+    },
+    {
+        "label": "apply_category_filter",
+        "importPath": "modules.filters",
+        "description": "modules.filters",
+        "isExtraImport": true,
+        "detail": "modules.filters",
+        "documentation": {}
+    },
+    {
+        "label": "get_summary",
+        "importPath": "modules.analysis",
+        "description": "modules.analysis",
+        "isExtraImport": true,
+        "detail": "modules.analysis",
+        "documentation": {}
+    },
+    {
+        "label": "value_counts",
+        "importPath": "modules.analysis",
+        "description": "modules.analysis",
+        "isExtraImport": true,
+        "detail": "modules.analysis",
+        "documentation": {}
+    },
+    {
+        "label": "plot_histogram",
+        "importPath": "modules.visualizer",
+        "description": "modules.visualizer",
+        "isExtraImport": true,
+        "detail": "modules.visualizer",
+        "documentation": {}
+    },
+    {
+        "label": "plot_boxplot",
+        "importPath": "modules.visualizer",
+        "description": "modules.visualizer",
+        "isExtraImport": true,
+        "detail": "modules.visualizer",
+        "documentation": {}
+    },
+    {
+        "label": "plot_pie_chart",
+        "importPath": "modules.visualizer",
+        "description": "modules.visualizer",
+        "isExtraImport": true,
+        "detail": "modules.visualizer",
+        "documentation": {}
+    },
+    {
+        "label": "plot_scatter",
+        "importPath": "modules.visualizer",
+        "description": "modules.visualizer",
+        "isExtraImport": true,
+        "detail": "modules.visualizer",
+        "documentation": {}
+    },
+    {
+        "label": "plot_bar_chart",
+        "importPath": "modules.visualizer",
+        "description": "modules.visualizer",
+        "isExtraImport": true,
+        "detail": "modules.visualizer",
+        "documentation": {}
+    },
+    {
+        "label": "dataset_info",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "missing_value_report",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "fix_streamlit_types",
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "isExtraImport": true,
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "get_summary",
+        "kind": 2,
+        "importPath": "modules.analysis",
+        "description": "modules.analysis",
+        "peekOfCode": "def get_summary(df):\n    summary = df.describe(include=\"all\")\n    # Convert all columns to string to ensure Streamlit/PyArrow compatibility\n    for col in summary.columns:\n        if summary[col].dtype == 'object':\n            summary[col] = summary[col].astype(str)\n    return summary\ndef value_counts(df, col):\n    return df[col].value_counts()",
+        "detail": "modules.analysis",
+        "documentation": {}
+    },
+    {
+        "label": "value_counts",
+        "kind": 2,
+        "importPath": "modules.analysis",
+        "description": "modules.analysis",
+        "peekOfCode": "def value_counts(df, col):\n    return df[col].value_counts()",
+        "detail": "modules.analysis",
+        "documentation": {}
+    },
+    {
+        "label": "fill_null_values",
+        "kind": 2,
+        "importPath": "modules.cleaner",
+        "description": "modules.cleaner",
+        "peekOfCode": "def fill_null_values(df, col, method, constant=None):\n    if method == \"Mean\":\n        df[col] = df[col].fillna(df[col].mean())\n    elif method == \"Median\":\n        df[col] = df[col].fillna(df[col].median())\n    elif method == \"Mode\":\n        df[col] = df[col].fillna(df[col].mode()[0])\n    elif method == \"Forward Fill\":\n        df[col] = df[col].fillna(method=\"ffill\")\n    elif method == \"Backward Fill\":",
+        "detail": "modules.cleaner",
+        "documentation": {}
+    },
+    {
+        "label": "drop_null_rows",
+        "kind": 2,
+        "importPath": "modules.cleaner",
+        "description": "modules.cleaner",
+        "peekOfCode": "def drop_null_rows(df):\n    return df.dropna()\ndef drop_null_columns(df):\n    return df.dropna(axis=1)",
+        "detail": "modules.cleaner",
+        "documentation": {}
+    },
+    {
+        "label": "drop_null_columns",
+        "kind": 2,
+        "importPath": "modules.cleaner",
+        "description": "modules.cleaner",
+        "peekOfCode": "def drop_null_columns(df):\n    return df.dropna(axis=1)",
+        "detail": "modules.cleaner",
+        "documentation": {}
+    },
+    {
+        "label": "apply_numeric_filter",
+        "kind": 2,
+        "importPath": "modules.filters",
+        "description": "modules.filters",
+        "peekOfCode": "def apply_numeric_filter(df, col, minv, maxv):\n    return df[(df[col] >= minv) & (df[col] <= maxv)]\ndef apply_category_filter(df, col, values):\n    return df[df[col].isin(values)]",
+        "detail": "modules.filters",
+        "documentation": {}
+    },
+    {
+        "label": "apply_category_filter",
+        "kind": 2,
+        "importPath": "modules.filters",
+        "description": "modules.filters",
+        "peekOfCode": "def apply_category_filter(df, col, values):\n    return df[df[col].isin(values)]",
+        "detail": "modules.filters",
+        "documentation": {}
+    },
+    {
+        "label": "load_data",
+        "kind": 2,
+        "importPath": "modules.loader",
+        "description": "modules.loader",
+        "peekOfCode": "def load_data(uploaded_file):\n    if uploaded_file.name.endswith(\".csv\"):\n        df = pd.read_csv(uploaded_file, encoding=\"utf-8\")\n    else:\n        df = pd.read_excel(uploaded_file)\n    return df",
+        "detail": "modules.loader",
+        "documentation": {}
+    },
+    {
+        "label": "plot_histogram",
+        "kind": 2,
+        "importPath": "modules.visualizer",
+        "description": "modules.visualizer",
+        "peekOfCode": "def plot_histogram(df, col):\n    fig, ax = plt.subplots()\n    sns.histplot(df[col].dropna(), kde=True, ax=ax)\n    st.pyplot(fig)\ndef plot_boxplot(df, col):\n    fig, ax = plt.subplots()\n    sns.boxplot(x=df[col], ax=ax)\n    st.pyplot(fig)\ndef plot_pie_chart(df, col):\n    fig, ax = plt.subplots()",
+        "detail": "modules.visualizer",
+        "documentation": {}
+    },
+    {
+        "label": "plot_boxplot",
+        "kind": 2,
+        "importPath": "modules.visualizer",
+        "description": "modules.visualizer",
+        "peekOfCode": "def plot_boxplot(df, col):\n    fig, ax = plt.subplots()\n    sns.boxplot(x=df[col], ax=ax)\n    st.pyplot(fig)\ndef plot_pie_chart(df, col):\n    fig, ax = plt.subplots()\n    df[col].value_counts().plot(kind='pie', ax=ax, autopct='%1.1f%%')\n    ax.set_ylabel('')\n    st.pyplot(fig)\ndef plot_scatter(df, col1, col2):",
+        "detail": "modules.visualizer",
+        "documentation": {}
+    },
+    {
+        "label": "plot_pie_chart",
+        "kind": 2,
+        "importPath": "modules.visualizer",
+        "description": "modules.visualizer",
+        "peekOfCode": "def plot_pie_chart(df, col):\n    fig, ax = plt.subplots()\n    df[col].value_counts().plot(kind='pie', ax=ax, autopct='%1.1f%%')\n    ax.set_ylabel('')\n    st.pyplot(fig)\ndef plot_scatter(df, col1, col2):\n    fig, ax = plt.subplots()\n    ax.scatter(df[col1], df[col2], alpha=0.6)\n    ax.set_xlabel(col1)\n    ax.set_ylabel(col2)",
+        "detail": "modules.visualizer",
+        "documentation": {}
+    },
+    {
+        "label": "plot_scatter",
+        "kind": 2,
+        "importPath": "modules.visualizer",
+        "description": "modules.visualizer",
+        "peekOfCode": "def plot_scatter(df, col1, col2):\n    fig, ax = plt.subplots()\n    ax.scatter(df[col1], df[col2], alpha=0.6)\n    ax.set_xlabel(col1)\n    ax.set_ylabel(col2)\n    st.pyplot(fig)\ndef plot_bar_chart(df, col):\n    fig, ax = plt.subplots()\n    df[col].value_counts().plot(kind='bar', ax=ax)\n    ax.set_title(f'Count of {col}')",
+        "detail": "modules.visualizer",
+        "documentation": {}
+    },
+    {
+        "label": "plot_bar_chart",
+        "kind": 2,
+        "importPath": "modules.visualizer",
+        "description": "modules.visualizer",
+        "peekOfCode": "def plot_bar_chart(df, col):\n    fig, ax = plt.subplots()\n    df[col].value_counts().plot(kind='bar', ax=ax)\n    ax.set_title(f'Count of {col}')\n    ax.set_ylabel('Count')\n    st.pyplot(fig)",
+        "detail": "modules.visualizer",
+        "documentation": {}
+    },
+    {
+        "label": "dataset_info",
+        "kind": 2,
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "peekOfCode": "def dataset_info(df):\n    return {\n        \"Rows\": df.shape[0],\n        \"Columns\": df.shape[1],\n        \"Memory (MB)\": round(df.memory_usage().sum()/1024**2, 2)\n    }\ndef missing_value_report(df):\n    report = df.isnull().sum().reset_index()\n    report.columns = [\"Column\", \"Missing Values\"]\n    report[\"Percentage\"] = (report[\"Missing Values\"] / len(df)) * 100",
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "missing_value_report",
+        "kind": 2,
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "peekOfCode": "def missing_value_report(df):\n    report = df.isnull().sum().reset_index()\n    report.columns = [\"Column\", \"Missing Values\"]\n    report[\"Percentage\"] = (report[\"Missing Values\"] / len(df)) * 100\n    report = report.sort_values(\"Missing Values\", ascending=False)\n    # Ensure string columns are explicitly string type for Streamlit compatibility\n    report[\"Column\"] = report[\"Column\"].astype(str)\n    return report\n# ===== STREAMLIT ARROW ERROR FIX =====\ndef fix_streamlit_types(df):",
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "fix_streamlit_types",
+        "kind": 2,
+        "importPath": "utils.helpers",
+        "description": "utils.helpers",
+        "peekOfCode": "def fix_streamlit_types(df):\n    \"\"\"\n    Fix DataFrame types to be compatible with Streamlit/PyArrow.\n    Explicitly converts object columns to string to avoid type inference issues.\n    \"\"\"\n    # First, ensure all object columns are string\n    for col in df.columns:\n        if df[col].dtype == 'object':\n            df[col] = df[col].astype(str)\n    # Handle numeric columns - ensure consistent dtypes",
+        "detail": "utils.helpers",
+        "documentation": {}
+    },
+    {
+        "label": "load_css",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def load_css():\n    st.markdown(\"\"\"\n    <style>\n    .stApp {\n        background: linear-gradient(135deg,#0f172a,#1e293b);\n        color:white;\n    }\n    [data-testid=\"stSidebar\"] {\n        background:#111827;\n    }",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "uploaded_file",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "uploaded_file = st.file_uploader(\"Upload CSV / Excel\", type=[\"csv\",\"xlsx\"])\nif uploaded_file:\n    df = load_data(uploaded_file)\n    # FIX ARROW ERROR\n    df = fix_streamlit_types(df)\n    # ===== DATASET INFO =====\n    st.markdown('<div class=\"card\">', unsafe_allow_html=True)\n    st.subheader(\"📊 Dataset Info\")\n    st.write(dataset_info(df))\n    st.dataframe(fix_streamlit_types(df).head())",
+        "detail": "app",
+        "documentation": {}
+    }
+]
